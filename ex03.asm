@@ -5,7 +5,7 @@
 	mov	bx, [Num1+4]
 	add	ax, bx
 	mov	[Num1+6], ax
-	mov	ax, 0x4C00
+	mov	ax, 0x4C00              ; terminate program
 	int	0x21
 ;execution never comes at this line
 Num1:	dw	5

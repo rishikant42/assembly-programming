@@ -5,7 +5,7 @@
      5 00000009 8B1E[1B00]              	mov	bx, [Num1+4]
      6 0000000D 01D8                    	add	ax, bx
      7 0000000F A3[1D00]                	mov	[Num1+6], ax
-     8 00000012 B8004C                  	mov	ax, 0x4C00
+     8 00000012 B8004C                  	mov	ax, 0x4C00              ; terminate program
      9 00000015 CD21                    	int	0x21
     10                                  ;execution never comes at this line
     11 00000017 0500                    Num1:	dw	5
