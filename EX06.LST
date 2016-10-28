@@ -1,0 +1,12 @@
+     1                                  [ORG 0x100]
+     2 00000000 A0[1700]                	mov	al, [Num1]
+     3 00000003 8A1E[1800]              	mov 	bl, [Num1+1]
+     4 00000007 00D8                    	add	al, bl
+     5 00000009 8A1E[1900]              	mov	bl, [Num1+2]
+     6 0000000D 00D8                    	add	al, bl
+     7 0000000F A3[1A00]                	mov	[Num1+3], ax
+     8 00000012 B8004C                  	mov	ax, 0x4C00
+     9 00000015 CD21                    	int	0x21
+    10                                  ;execution never comes at this line
+    11                                  
+    12 00000017 050A0F00                Num1:	db	5, 10, 15, 0
