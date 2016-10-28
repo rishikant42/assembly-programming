@@ -1,11 +1,11 @@
      1                                  [ORG 0x100]
-     2 00000000 A1[1700]                	mov	ax, [Num1]
-     3 00000003 8B1E[1900]              	mov 	bx, [Num2]
-     4 00000007 01D8                    	add	ax, bx
-     5 00000009 8B1E[1B00]              	mov	bx, [Num3]
-     6 0000000D 01D8                    	add	ax, bx
-     7 0000000F A3[1D00]                	mov	[Num4], ax
-     8 00000012 B8004C                  	mov	ax, 0x4C00
+     2 00000000 A1[1700]                	mov	ax, [Num1]      ; load first number in ax  
+     3 00000003 8B1E[1900]              	mov 	bx, [Num2]    ; load second number in bx
+     4 00000007 01D8                    	add	ax, bx          ; accumulate sum in ax
+     5 00000009 8B1E[1B00]              	mov	bx, [Num3]      ; load third number in bx
+     6 0000000D 01D8                    	add	ax, bx          ; accumulate sum in ax
+     7 0000000F A3[1D00]                	mov	[Num4], ax      ; store sum in num4
+     8 00000012 B8004C                  	mov	ax, 0x4C00      ; terminate program
      9 00000015 CD21                    	int	0x21
     10                                  ;execution never comes at this line
     11 00000017 0500                    Num1:	dw	5
